@@ -1,0 +1,18 @@
+﻿
+@using HtmlAndCss2.Models
+@model List<NhaXuatBan>
+<div class="cap1">Nhà Xuất Bản</div>
+<div class="a">
+    @{
+
+
+        foreach (var i in Model)
+        {
+
+            <a href="@Url.Action("NhaXuatBan", "NhaXuatBan", new { @manhaxuatban=i.MaNXB})">@i.TenNXB <img id="hot" src="~/Content/HinhAnh/hot.gif" /><img id="hot2" src="@Url.Content("~/Content/HinhAnhNXB/"+i.Logo)" /></a>
+
+
+        }
+
+    }
+</div>

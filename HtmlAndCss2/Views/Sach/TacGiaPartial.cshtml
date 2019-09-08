@@ -1,0 +1,18 @@
+﻿@using HtmlAndCss2.Models
+@model List<TacGia>
+ <div class="cap1">Tác Giả</div>
+<div class="a">
+    @{
+
+
+        foreach (var i in Model)
+        {
+
+            <a href="http://google.com">@i.TenTacGia <img id="hot" src="~/Content/HinhAnh/hot.gif" /></a>
+
+
+
+        }
+
+    }
+</div>

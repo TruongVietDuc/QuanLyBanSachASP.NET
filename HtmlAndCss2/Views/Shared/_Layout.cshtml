@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="~/Content/jquery-3.3.1.min.js"></script>
+    <link type="text/css" href="~/Content/HtmlAndCss-2.css" rel="stylesheet" />
+    <link type="text/css" href="~/Content/HtmlAndCss-2.1.css" rel="stylesheet" />
+    <link href="~/Content/HtlmAndCss-2.2.css" rel="stylesheet" />
+   
+    <script>
+        $(document).ready(function () {
+
+            $(".cap1").click(function () {
+                $(this).next().slideToggle();
+            });
+        });
+    </script>
+  <style>
+      .menutimkiem {
+          margin-top: 30px;
+          margin-right: 70px;
+          width: 350px;
+      }
+
+      .timkiem {
+          float: left;
+          width:300px;
+      }
+
+      .fa-search {
+          float: right;
+          margin-top: 4px;
+          margin-left: 5px;
+      }
+      </style>
+    
+</head>
+<body class="nen">
+
+
+    @RenderBody()
+
+
+    <div class="menutren">
+       <div class="trongmenutren">
+        <div class="menungang">
+           <a href="http://google.com">Kinh Tế</a>
+           <a href="http://google.com">Văn Hóa</a>
+            <a href="http://google.com">Nghệ Thuật</a>
+            <a href="http://google.com">Điện Ảnh</a>
+           <a href="http://google.com">Chính Trị</a>
+            <a href="http://google.com">Thể Thao</a>
+            <a href="http://google.com">Du Lịch</a>
+        </div>
+        <div class="menutimkiem">
+            @using (Html.BeginForm())
+            {
+                @Html.TextBox("txtTimKiem", "Tìm Kiếm", new { @class = "timkiem"});
+            }
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="dangkydangnhap">
+            @Html.ActionLink("Đăng Ký", "DangKy", null, new { @class = "DangKy" })
+            <i class="fas fa-sign-in-alt"></i>
+            @Html.ActionLink("Đăng Nhập", "DangNhap", null, new { @class = "DangKy" })
+            <i class="fas fa-unlock"></i>
+        </div>
+        </div>
+    </div>
+    <div>
+   </div>
+    <div class="tp">
+       @Html.Partial("~/Views/Home/SachMoiPartial.cshtml");
+        <div class="phai">
+            <div class="_6cot">
+                <div class="_1cot">
+                    <a href="google.com"><img src="~/Content/HinhAnh/hoa-2.jpg" /></a>
+                    <a class="linkcot1" href="http://google.com">Kinh Dị</a>
+                </div>
+                <div class="_1cot">
+                    <a href="google.com"><img src="~/Content/HinhAnh/hoa-2.jpg" /></a>
+                    <a class="linkcot1" href="http://google.com">Hành Động</a>
+                </div>
+                <div class="_1cot">
+                    <a href="google.com"><img src="~/Content/HinhAnh/hoa-2.jpg" /></a>
+                    <a class="linkcot1" href="http://google.com">Hài Hước</a>
+                </div>
+                <div class="_1cot">
+                    <a href="google.com"><img src="~/Content/HinhAnh/hoa-2.jpg" /></a>
+                    <a class="linkcot1" href="http://google.com">Lãn Mãn</a>
+                </div>
+                <div class="_1cot">
+                    <a href="google.com"><img src="~/Content/HinhAnh/hoa-2.jpg" /></a>
+                    <a class="linkcot1" href="http://google.com">Lịch Sử</a>
+                </div>
+                <div class="_1cot">
+                    <a href="google.com"><img src="~/Content/HinhAnh/hoa-2.jpg" /></a>
+                    <a class="linkcot1" href="http://google.com">Trinh Thám</a>
+                </div>
+            </div>
+            <div class="khoinho">
+                <a class="tren" href="http://google.com"><img src="~/Content/HinhAnh/hoa-1.jpg" /></a>
+                <div class="duoi">
+                    <a href="http://google.com"> Hoa 1</a>
+                </div>
+            </div>
+            <div class="khoinho">
+                <a class="tren" href="http://google.com"><img src="~/Content/HinhAnh/hoa-1.jpg" /></a>
+                <div class="duoi">
+                    <a href="http://google.com"> Hoa 1</a>
+                </div>
+            </div>
+            <div class="khoinho">
+                <a class="tren" href="http://google.com"><img src="~/Content/HinhAnh/hoa-1.jpg" /></a>
+                <div class="duoi">
+                    <a href="http://google.com"> Hoa 1</a>
+                </div>
+            </div>
+            <div class="khoinho">
+                <a class="tren" href="http://google.com"><img src="~/Content/HinhAnh/hoa-1.jpg" /></a>
+                <div class="duoi">
+                    <a href="http://google.com"> Hoa 1</a>
+                </div>
+            </div>
+            <div class="khoinho">
+                <a class="tren" href="http://google.com"><img src="~/Content/HinhAnh/hoa-1.jpg" /></a>
+                <div class="duoi">
+                    <a href="http://google.com"> Hoa 1</a>
+                </div>
+            </div>
+            <div class="khoinho">
+                <a class="tren" href="http://google.com"><img src="~/Content/HinhAnh/hoa-1.jpg" /></a>
+                <div class="duoi">
+                    <a href="http://google.com"> Hoa 1</a>
+                </div>
+            </div>
+            <div class="khoinho">
+                <a class="tren" href="http://google.com"><img src="~/Content/HinhAnh/hoa-1.jpg" /></a>
+                <div class="duoi">
+                    <a href="http://google.com"> Hoa 1</a>
+                </div>
+            </div>
+            <div class="khoinho">
+                <a class="tren" href="http://google.com"><img src="~/Content/HinhAnh/hoa-1.jpg" /></a>
+                <div class="duoi">
+                    <a href="http://google.com"> Hoa 1</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        copyright ducduc113113@gmail.com
+    </div>
+    <hr>
+</body>
+</html>

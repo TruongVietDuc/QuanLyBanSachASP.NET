@@ -1,0 +1,83 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="~/Content/jquery-3.3.1.min.js"></script>
+    <link href="~/Content/HtmlAndCss/HtmlAndCss-2.css" rel="stylesheet" />
+
+    <script src="~/Content/Javascript/jquery.js"></script>
+
+
+</head>
+<body class="nen">
+
+
+    @RenderBody()
+
+
+    <div class="menutren">
+        <div class="trongmenutren">
+            <div class="menungang">
+                <a href="@Url.Action("Index", "Home")">Trang Chủ</a>
+                <a href="http://google.com">Văn Hóa</a>
+                <a href="http://google.com">Nghệ Thuật</a>
+                <a href="http://google.com">Điện Ảnh</a>
+                <a href="http://google.com">Chính Trị</a>
+                <a href="http://google.com">Thể Thao</a>
+                <a href="http://google.com">Du Lịch</a>
+            </div>
+            <div class="menutimkiem">
+                @using (Html.BeginForm())
+                {
+                    @Html.TextBox("txtTimKiem", "Tìm Kiếm", new { @class = "timkiem" });
+                }
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="dangkydangnhap">
+                <a class="DangKy" href="@Url.Action("NguoiDungDangKy", "NguoiDungDangKy")">
+                    Đăng Ký
+                </a>
+                <i class="fas fa-sign-in-alt"></i>
+                <a class="DangKy" href="@Url.Action("NguoiDungDangNhap", "NguoiDungDangNhap")">
+                    Đăng Nhập
+                </a>
+                <i class="fas fa-unlock"></i>
+            </div>
+        </div>
+    </div>
+    <div>
+    </div>
+    <div class="tp">
+        <div class="trai">
+            @Html.Action("SachMoiPartial", "Sach")
+            @Html.Action("NhaXuatBanPartial", "NhaXuatBan")
+            @Html.Action("TacGiaPartial", "Sach")
+            @Html.Partial("~/Views/Sach/TrichDanPartial.cshtml")
+        </div>
+        <div class="phai">
+            <div class="_6cot">
+
+
+                @Html.Action("ChuDePartial", "ChuDe")
+
+
+            </div>
+
+
+
+
+            @Html.Action("SachTheoChuDePartial", "ChuDe");
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="trongfooter">
+            <a id="hot3">copyright ducduc113113@gmail.com</a>
+        </div>
+    </div>
+    <hr>
+</body>
+</html>

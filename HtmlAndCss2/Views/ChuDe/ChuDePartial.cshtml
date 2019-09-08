@@ -1,0 +1,18 @@
+﻿@using HtmlAndCss2.Models
+@model List<ChuDe>
+@{
+
+
+
+                foreach (var i in Model)
+                {
+                    <div class="_1cot">
+                        <a href="@Url.Action("ChuDe", "ChuDe", new { @machude=i.MaChuDe})"><img style=" height: 50px" src="@Url.Content("~/Content/HinhAnhChuDe/"+i.LogoChuDe)" /></a>
+                        <a class="linkcot1" href="@Url.Action("ChuDe", "ChuDe", new { @machude=i.MaChuDe})">@i.TenChuDe</a>
+                    </div>
+                   
+
+                }
+
+}
+

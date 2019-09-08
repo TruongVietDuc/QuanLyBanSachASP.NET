@@ -1,0 +1,23 @@
+﻿@using HtmlAndCss2.Models
+@model List<Sach>
+
+
+
+    <div class="cap1">Sách Mới</div>
+    <div class="a">
+        @{
+
+
+            foreach (var i in Model)
+            {
+
+                <a href="@Url.Action("XemChiTiet", "Sach", new { @masach=i.MaSach})">@i.TenSach <img id="hot" src="~/Content/HinhAnh/hot.gif" /><img id="hot2" src="@Url.Content("~/Content/HinhAnhSanPham/"+i.AnhBia)" /></a>
+
+
+
+            }
+
+        }
+    </div>
+ 
+

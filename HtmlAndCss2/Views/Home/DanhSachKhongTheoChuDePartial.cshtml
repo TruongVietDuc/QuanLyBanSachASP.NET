@@ -1,0 +1,25 @@
+﻿@using HtmlAndCss2.Models
+@model List<Sach>
+
+@{int a = 0;}
+@foreach (var i in Model)
+{
+    a++;
+    <div class="khoinho">
+
+
+        <a class="tren" href="@Url.Action("XemChiTiet", "Sach", new { @masach=i.MaSach})"><img class="hot4" src="@Url.Content("~/Content/HinhAnhSanPham/" + i.AnhBia)" /></a>
+       
+
+        <div class="duoi">
+          
+                        <a href="@Url.Action("XemChiTiet", "Sach", new { @masach=i.MaSach})">@i.TenSach</a><br>
+               
+            <a style="color:mediumblue">@i.GiaBan.000 VNĐ</a>
+        </div>
+    </div>
+    if (a % 4 == 0)
+    {
+        <div style="clear:both;"></div>
+    }
+}

@@ -1,0 +1,30 @@
+﻿@using HtmlAndCss2.Models
+@model Sach
+@{
+    ViewBag.Title = "XemChiTiet";
+    Layout = "~/Views/Layout/_Layout_XemChiTiet.cshtml";
+}
+@section NoiDungXemChiTiet{
+    <div class="xemchitiet">
+  <div class="trai_xemchitiet">
+
+
+        <a class="trai_tren_xemchitiet" href="http://google.com"><img class="trai_tren_xemchitiet_img" src="@Url.Content("~/Content/HinhAnhSanPham/" + Model.AnhBia)" /></a>
+       
+
+        <div class="trai_duoi_xemchitiet">
+          
+           <b >Tên Sách:</b> <a href="http://google.com">@Model.TenSach</a><br>
+               
+           <b >Gía Bán:</b> <a href="http://google.com">@Model.GiaBan.000VNĐ</a>
+        </div>
+    </div>
+  <div class="phai_xemchitiet">
+      <a href="google.com">Chọn Mua</a><br><br><br><br>
+      <a href="google.com">Số Lượng</a><br><br><br><br>
+      <b>Nội Dung: @Model.MoTa</b><br>
+  </div>
+        </div>
+   
+}
+
